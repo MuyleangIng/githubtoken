@@ -1,4 +1,6 @@
-
+#!/bin/bash
+gitusername="Your username github"
+gittoken="Your token github" 
 echo "Starting repository deletion script"
 read -p "Enter repository: " nameRepo
 if [ -z "$nameRepo" ]; then
@@ -6,8 +8,6 @@ if [ -z "$nameRepo" ]; then
   exit 1
 fi
 echo "Name of repository to delete: $nameRepo"
-gitusername="MuyleangIng"
-gittoken="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" 
 
 # Confirm before deletion
 read -p "Are you sure you want to delete the repository $nameRepo? [y/N]: " confirm

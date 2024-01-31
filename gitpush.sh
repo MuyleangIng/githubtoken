@@ -1,7 +1,9 @@
-
-gitusername="MuyleangIng"
-gittoken="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"    
+#!/bin/bash
+gitusername="Your username github"
+gittoken="Your token github"    
 gitUrl="github.com/$gitusername"
+
+
 if [ -d ".git" ]; then
     echo "Git repo exists"
     git add .

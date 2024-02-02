@@ -1,0 +1,422 @@
+{
+	"info": {
+		"_postman_id": "e13564da-ec29-417f-9107-0c4542a86964",
+		"name": "ISTAD SC Mobile Dev.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7398661"
+	},
+	"item": [
+		{
+			"name": "Universities",
+			"item": [
+				{
+					"name": "Get Universities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sc_dev}}universities",
+							"host": [
+								"{{sc_dev}}universities"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "Fetch All Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sc_dev}}courses",
+							"host": [
+								"{{sc_dev}}courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Detail Course",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sc_dev}}courses/3",
+							"host": [
+								"{{sc_dev}}courses"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch All Available Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sc_dev}}courses/available",
+							"host": [
+								"{{sc_dev}}courses"
+							],
+							"path": [
+								"available"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Available Class by Course",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sc_dev}}courses/0d566246-f367-4052-ab72-fd57634f163f/classes",
+							"host": [
+								"{{sc_dev}}courses"
+							],
+							"path": [
+								"0d566246-f367-4052-ab72-fd57634f163f",
+								"classes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Files",
+			"item": [
+				{
+					"name": "Uplaod Image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Admin/Pictures/1681904263173.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{sc_dev}}files",
+							"host": [
+								"{{sc_dev}}files"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "Fetch All Students",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Host",
+								"value": "api.istad.co",
+								"type": "text"
+							},
+							{
+								"key": "apiKey",
+								"value": "2uHG3FbYCvrZrT2JKRfgPBrfIax5zPwl",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{sc_dev}}students",
+							"host": [
+								"{{sc_dev}}students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"123@gmail.com\",\n  \"nameEn\": \"Koka Kola\",\n  \"gender\": \"male\",\n  \"dob\": \"2023-05-27T15:06:08.106Z\",\n  \"pob\": {\n    \"id\": 3,\n    \"shortName\": \"string\",\n    \"fullName\": \"string\",\n    \"locationType\": \"string\"\n  },\n  \"currentAddress\": {\n    \"id\": 3,\n    \"shortName\": \"string\",\n    \"fullName\": \"string\",\n    \"locationType\": \"string\"\n  },\n  \"phoneNumber\": \"string\",\n  \"photoUri\": \"string\",\n  \"education\": \"string\",\n  \"universityInfo\": {\n    \"id\": 6,\n    \"shortName\": \"string\",\n    \"fullName\": \"string\"\n  },\n  \"isDeleted\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{sc_dev}}students",
+							"host": [
+								"{{sc_dev}}students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enrollment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"classId\": 26,\r\n  \"studentId\": 257\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{sc_dev}}enrollments",
+							"host": [
+								"{{sc_dev}}enrollments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Enroll By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sc_prod}}enrollments/1",
+							"host": [
+								"{{sc_prod}}enrollments"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Student By UUID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sc_dev}}students/627e816f-814e-40e1-9989-33f0963505c6",
+							"host": [
+								"{{sc_dev}}students"
+							],
+							"path": [
+								"627e816f-814e-40e1-9989-33f0963505c6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student By UUID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"chhayajr10@gmail.com\",\r\n    \"nameEn\": \"ILJiMae\",\r\n    \"nameKh\": \"អ៊ីលជីម៉េ\",\r\n    \"gender\": \"Male\",\r\n    \"dob\": \"2021-05-31\",\r\n    \"pob\": {\r\n        //\"shortName\": \"DK\",\r\n        //\"fullName\": \"Dangkor\",\r\n        //\"locationType\": \"k\",\r\n        \"id\": 2\r\n    },\r\n    \"currentAddress\": {\r\n        //\"shortName\": \"TK\",\r\n        //\"fullName\": \"Touk Kork\",\r\n        //\"locationType\": \"k\",\r\n        \"id\": 2\r\n    },\r\n    \"phoneNumber\": \"077459947\",\r\n    \"photoUri\": \"f6b213c0-4167-4432-a04a-c9f0fabd7927.png\",\r\n    \"universityInfo\": {\r\n        //\"shortName\": \"RUPP\",\r\n        //\"fullName\": \"Royal University of Phnom Penh\",\r\n        \"id\": 6\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{sc_dev}}students/d569e9ec-e3ed-4d5d-b373-12e6201ec11b",
+							"host": [
+								"{{sc_dev}}students"
+							],
+							"path": [
+								"d569e9ec-e3ed-4d5d-b373-12e6201ec11b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Student By Email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sc_dev}}students/find-by-email?email=123@gmail.com",
+							"host": [
+								"{{sc_dev}}students"
+							],
+							"path": [
+								"find-by-email"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "123@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Provinces",
+			"item": [
+				{
+					"name": "Fetch Place of Birth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sc_stage}}provinces?location_type=p",
+							"host": [
+								"{{sc_stage}}provinces"
+							],
+							"query": [
+								{
+									"key": "location_type",
+									"value": "p"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Current Address",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sc_prod}}provinces?location_type=k",
+							"host": [
+								"{{sc_prod}}provinces"
+							],
+							"query": [
+								{
+									"key": "location_type",
+									"value": "k"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Results",
+			"item": [
+				{
+					"name": "checking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nameEn\": \"Chan Chhaya\",\r\n    \"dob\": \"1998-09-04\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{sc_dev}}results/checking",
+							"host": [
+								"{{sc_dev}}results"
+							],
+							"path": [
+								"checking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Student Result by UUID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{sc_dev}}results/students/decb6a4f-a11b-46a8-8ec8-700ebb8f9dfd",
+							"host": [
+								"{{sc_dev}}results"
+							],
+							"path": [
+								"students",
+								"decb6a4f-a11b-46a8-8ec8-700ebb8f9dfd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "sc_dev",
+			"value": "http://localhost:15600/api/v1/",
+			"type": "default"
+		},
+		{
+			"key": "sc_prod",
+			"value": "https://api.istad.co/shortcourse/api/v1/",
+			"type": "default"
+		},
+		{
+			"key": "sc_stage",
+			"value": "http://188.166.229.56:16001/api/v1/",
+			"type": "string"
+		}
+	]
+}

@@ -1,6 +1,6 @@
 #!/bin/bash
-gitusername="Your username github"
-gittoken="Your token github"    
+gitusername="MuyleangIng"
+gittoken="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"    
 gitUrl="github.com/$gitusername"
 
 

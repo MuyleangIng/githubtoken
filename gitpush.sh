@@ -1,6 +1,6 @@
 #!/bin/bash
 gitusername="MuyleangIng"
-gittoken="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"    
+gittoken="swdfghj"    
 gitUrl="github.com/$gitusername"
 
 
